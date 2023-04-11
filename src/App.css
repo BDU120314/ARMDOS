@@ -1,0 +1,247 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    font-size: 'Open Sans', sans-serif;
+    font-size: 16px;
+     height: 100vh;
+     display: grid;
+     grid-template-areas: 
+     'header header header'
+     'nav content sidebar'
+     'nav footer footer' ;
+     grid-template-columns: 1fr 4fr 1fr;
+     grid-template-rows: 80px 1fr 70px;
+}
+
+header,
+footer,
+main,
+aside,
+nav{
+    width: 760px;
+    background-color: rgba(233, 237, 240, 0.963);
+    color: #fff;
+    padding: 20px;
+    border: skyblue 1px solid;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(9, 172, 9);
+    
+}
+.header{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ .logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.logo h2{
+    color: gray;
+    font-weight: 900;
+}
+ .header ul{
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    gap: 20px; 
+  
+ }
+
+ .header ul li a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+ }
+nav{
+    grid-area: nav;
+    background: linear-gradient(green, rgb(170, 255, 0), rgb(20, 175, 9));
+    position: fixed;
+    top: 120px;
+    left: 0px;
+    width: 208px;
+    height: 100%;
+}
+
+main{
+    grid-area: content;
+}
+
+aside{
+    grid-area: sidebar;
+}
+
+footer{
+    grid-area: footer;
+}
+
+.sidebar {
+    overflow: hidden;
+    z-index: 2;
+}
+
+.sidebar ul li{
+    width: 100%;
+    list-style: none;
+}
+
+
+.sidebar ul li:hover{
+   background: #444; 
+}
+
+.sidebar ul li:first-child{
+    line-height: 60px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid #000;
+}
+
+
+.sidebar ul li:first-child:hover{
+    background: none;
+}
+.sidebar ul li a {
+    width: 1005;
+    text-decoration: none;
+    color: #fff;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    min-width: 60x;
+    font-size: 24px;
+    text-align: center;
+}
+.cards{
+    width: 760px;
+    position: fixed;
+    top: 120px;
+    left: 15.5%;
+    height: 150px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+margin-left: 10px;
+}
+.card{
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: wheat;
+    color: black;
+    width: 160px;
+    border-radius: 15px;
+    
+}
+.card-content{
+    background-color: gainsboro;
+    height: 105px;
+    width: 110px;
+    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.number{
+    background-color: white;
+    color: blue;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+   
+}
+
+
+.main{
+    position: absolute;
+    min-height: 1vh;
+    left: 300px; 
+    background-color: #db2121;
+    margin-top: 60px;
+}
+
+.maincontent{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* background-color:gainsboro; */
+    color: black;
+    line-height: 1.5em;
+    max-width: 750px;
+    font-style: bold;
+    margin-top: 180px;
+}
+
+.top-bar{
+    position: absolute;
+    height: 60px;
+    width: calc(100% - 300px);
+    background: #fff;
+    display: grid;
+    grid-template-columns: 10fr 0.4fr 1fr;
+    grid: gap 5px;
+    align-items: center;
+    color: #444;
+    padding: 0 2px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0 0.2);
+    z-index: 1;
+}
+.rightside{
+    width: 300px;
+    height: 100%;
+    margin-top: 40px;
+    background-color:  rgb(21, 236, 111);
+    position: fixed;
+    top: 80px;
+    left: 77%;
+}
+.search {
+   display: flex;
+   gap: 5px;
+   padding-top: 0px;
+}
+.search input{
+    border-radius: 5px;
+    outline: none;
+    border: gray;
+     height: 40px;
+     width: 75%;
+}
+
+.search button{
+    padding-top: 0px;
+    height:40px ;
+    width: 80px;
+    border-radius: 5px;
+    border: gray;
+    outline: none;
+}
+
+img{
+    height: 80px;
+    width: 80px;
+    border-radius: 20px;
+    margin-right: 10px; 
+  
+}
